@@ -10,6 +10,12 @@ Make sure you have hub installed:
 brew install hub
 ```
 
+Install this!
+
+```
+go get github.com/amencarini/jirhub
+```
+
 Then create a configuration file in your home dir with name `.jirhub-config.json`, and fill it as following:
 
 ```json
@@ -21,4 +27,6 @@ Then create a configuration file in your home dir with name `.jirhub-config.json
 }
 ```
 
-Use `targetBranch` if you want a default target branch other than master
+Use `targetBranch` if you want a default target branch other than master.
+
+Then when in a directory with the project associated to Jira, use `jirhub pr` and profit!
