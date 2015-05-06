@@ -16,7 +16,9 @@ Then create a configuration file in your home dir with name `.jirhub-config.json
 {
 	"username": "amencarini",
 	"password": "wow_muchs3cure",
-	"targetBranch": "notMaster" // If you want a default target branch other than master
+	"targetBranch": "notMaster",
 	"jiraHost": "yourcompany.atlassian.net"
 }
 ```
+
+Use `targetBranch` if you want a default target branch other than master
