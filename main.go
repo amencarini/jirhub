@@ -2,6 +2,7 @@ package main
 
 import (
 	"github.com/amencarini/jirhub/commands"
+	"github.com/amencarini/jirhub/config"
 
 	"os"
 
@@ -16,13 +17,15 @@ func main() {
 	app.Email = "alessandro.mencarini@gmail.com"
 	app.Version = "0.0.1"
 
+	conf := config.GetConfiguration()
+
 	app.Commands = []cli.Command{
 		{
 			Name:      "pull-request",
 			ShortName: "pr",
 			Usage:     "Opens a GitHub pull request for the current branch",
 			Action: func(c *cli.Context) {
-				commands.PullRequest()
+				commands.PullRequest(conf)
 			},
 		},
 		{
@@ -30,7 +33,7 @@ func main() {
 			ShortName: "s",
 			Usage:     "Switchs to a branch, local or remote, given a Jira ticket ID",
 			Action: func(c *cli.Context) {
-				commands.Select()
+				commands.Select(conf)
 			},
 		},
 	}
